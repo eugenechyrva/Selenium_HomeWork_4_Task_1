@@ -1,0 +1,30 @@
+Feature: Form automation
+  As a user I want to fill my form
+  and submit it
+
+  Scenario Outline: Form filling and submition
+    Given user navigates to the app url
+    When user fills first name with value "<FirstName>"
+    And user fills last name with value "<LastName>"
+    And user fills gender
+    And user fills date of birth with value "<Date>"
+    And user fills address with value "<Address>"
+    And user fills email with value "<Email>"
+    And user fills password with value "<Password>"
+    And user fills company with value "<Company>"
+    And user fills role
+    And user fills expectation
+    And user fills ways of development
+    And user fills comment with value "<Comment>"
+    And user submit form
+    Then form is submitted
+
+    Examples:
+      | FirstName | LastName  | Date       |  Email                   | Company          | Password | Address          | Comment     |
+      | Ievgen    | Chyrva    | 03/17/1989 |  ievgen_chyrva@ukr.net   | HMD              | Test2018 | 1719 Grove St    | No comment  |
+      | Sergii    | Opanasiuk | 04/21/1987 |  eugene.chyrva@gmail.com | Forte Group Inc. | Test2019 | 2345 Division St | Hello       |
+      | Benson    | Kamary    | 05/05/1986 |  email@gmail.com         | Forte Knowledge  | Test2020 | 5869 Central St  | Hello World |
+      | Vadym     | Iershov   | 05/11/1990 |  gmailemail@gmail.com    | HMD              | Test2021 | 9785 Lake Ave.   | Comments    |
+
+
+
